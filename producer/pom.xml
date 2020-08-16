@@ -46,7 +46,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <outputDirectory></outputDirectory>
+                    <outputDirectory/>
                     <schemaRegistryUrls>
                         <param>http://localhost:8081</param>
                     </schemaRegistryUrls>
