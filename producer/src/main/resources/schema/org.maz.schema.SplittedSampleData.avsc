@@ -1,0 +1,19 @@
+{
+    "namespace": "org.maz.schema",
+    "type": "record",
+    "name": "SplittedSampleData",
+    "fields": [
+        {
+            "name": "SplittedSampleData",
+            "type": {
+                "avro.java.string": "string",
+                "type": "string"
+            },
+            "default": ""
+        },
+        {
+            "name": "splittedEnumSample",
+            "type": "SplittedEnumerationSample"
+        }
+    ]
+}

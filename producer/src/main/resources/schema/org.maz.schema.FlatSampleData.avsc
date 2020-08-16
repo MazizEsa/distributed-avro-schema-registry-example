@@ -1,0 +1,28 @@
+{
+    "namespace": "org.maz.schema",
+    "type": "record",
+    "name": "FlatSampleData",
+    "fields": [
+        {
+            "name": "FlatSampleData",
+            "type": {
+                "avro.java.string": "string",
+                "type": "string"
+            },
+            "default": ""
+        },
+        {
+            "name": "flatEnumSample",
+            "type": {
+                "name": "FlatEnumerationSample",
+                "symbols": [
+                    "SAMPLE_1",
+                    "SAMPLE_2",
+                    "SAMPLE_3"
+                ],
+                "type": "enum"
+            },
+            "default": "SAMPLE_1"
+        }
+    ]
+}

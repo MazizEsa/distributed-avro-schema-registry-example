@@ -1,0 +1,11 @@
+{
+    "namespace": "org.maz.schema",
+    "name": "SplittedEnumerationSample",
+    "type": "enum",
+    "symbols": [
+        "SAMPLE_1",
+        "SAMPLE_2",
+        "SAMPLE_3"
+    ],
+    "default": "SAMPLE_1"
+}
