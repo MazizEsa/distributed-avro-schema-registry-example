@@ -13,7 +13,7 @@
         },
         {
             "name": "splittedEnumSample",
-            "type": "SplittedEnumerationSample"
+            "type": "org.maz.schema.SplittedEnumerationSample"
         }
     ]
 }

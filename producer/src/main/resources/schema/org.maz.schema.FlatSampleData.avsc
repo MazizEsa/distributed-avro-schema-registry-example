@@ -14,6 +14,7 @@
         {
             "name": "flatEnumSample",
             "type": {
+                "namespace": "org.maz.schema",
                 "name": "FlatEnumerationSample",
                 "symbols": [
                     "SAMPLE_1",
@@ -21,8 +22,7 @@
                     "SAMPLE_3"
                 ],
                 "type": "enum"
-            },
-            "default": "SAMPLE_1"
+            }
         }
     ]
 }

@@ -11,5 +11,73 @@
 
     <artifactId>consumer</artifactId>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <!-- we only want to clean the directory where we download the schema -->
+                            <directory>${project.basedir}/src/main/resources/schema</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>${avro.version}</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <imports>
+                                <import>src/main/resources/schema/org.maz.schema.SplittedEnumerationSample.avsc</import>
+                            </imports>
+                            <sourceDirectory>${project.basedir}/src/main/resources/schema</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-schema-registry-maven-plugin</artifactId>
+                <version>${confluent.platform.version}</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>download</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <outputDirectory>${project.basedir}/src/main/resources/schema</outputDirectory>
+                    <schemaRegistryUrls>
+                        <param>http://localhost:8081</param>
+                    </schemaRegistryUrls>
+                    <subjects/>
+                    <subjectPatterns>
+                        <pattern>.*FlatSampleData</pattern>
+                        <pattern>.*SplittedSampleData</pattern>
+                        <pattern>.*SplittedEnumerationSample</pattern>
+                    </subjectPatterns>
+                    <references/>
+                </configuration>
+                <goals>
+                    <goal>download</goal>
+                </goals>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
