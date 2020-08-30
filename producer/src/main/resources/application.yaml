@@ -5,7 +5,6 @@ spring:
       schema.registry.url: http://localhost:8081
       use.latest.version: true # this is needed for schema reference to work
       auto.register.schemas: false # this is needed for schema reference to work
-      specific.avro.reader: true
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
