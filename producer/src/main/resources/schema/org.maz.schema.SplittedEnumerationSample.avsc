@@ -3,9 +3,9 @@
     "name": "SplittedEnumerationSample",
     "type": "enum",
     "symbols": [
-        "SAMPLE_1",
-        "SAMPLE_2",
-        "SAMPLE_3"
+        "SAMPLE1",
+        "SAMPLE2",
+        "SAMPLE3"
     ],
-    "default": "SAMPLE_1"
+    "default": "SAMPLE1"
 }

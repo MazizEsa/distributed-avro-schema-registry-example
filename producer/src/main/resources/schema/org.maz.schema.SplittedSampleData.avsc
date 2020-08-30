@@ -6,14 +6,14 @@
         {
             "name": "SplittedSampleData",
             "type": {
-                "avro.java.string": "string",
+                "avro.java.string": "String",
                 "type": "string"
             },
             "default": ""
         },
         {
-            "name": "splittedEnumSample",
-            "type": "org.maz.schema.SplittedEnumerationSample"
+            "type": "org.maz.schema.SplittedEnumerationSample",
+            "name": "splittedEnumerationSample"
         }
     ]
 }

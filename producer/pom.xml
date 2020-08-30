@@ -28,6 +28,7 @@
                             </imports>
                             <sourceDirectory>${project.basedir}/src/main/resources/schema</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+                            <stringType>String</stringType>
                         </configuration>
                     </execution>
                 </executions>
@@ -58,7 +59,7 @@
                     <references>
                         <org.maz.schema.SplittedSampleData>
                             <reference>
-                                <name>org.maz.schema.SplittedEnumerationSample</name>
+                                <name>splittedEnumerationSample</name>
                                 <subject>org.maz.schema.SplittedEnumerationSample</subject>
                             </reference>
                         </org.maz.schema.SplittedSampleData>

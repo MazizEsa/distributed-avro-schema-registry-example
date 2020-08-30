@@ -21,7 +21,7 @@ public class ProducerController {
     public ResponseEntity<String> triggerSendFlatMessage() {
         final FlatSampleData flatSampleData = FlatSampleData.newBuilder()
                 .setFlatSampleData("This is an example")
-                .setFlatEnumSample(FlatEnumerationSample.SAMPLE_1)
+                .setFlatEnumSample(FlatEnumerationSample.SAMPLE1)
                 .build();
         kafkaMessageService.sendFlatSampleData(flatSampleData);
 
@@ -32,7 +32,7 @@ public class ProducerController {
     public ResponseEntity<String> triggerSendSplittedMessage() {
         final SplittedSampleData splittedSampleData = SplittedSampleData.newBuilder()
                 .setSplittedSampleData("This is a splitted data, schema reference")
-                .setSplittedEnumSample(SplittedEnumerationSample.SAMPLE_2)
+                .setSplittedEnumerationSample(SplittedEnumerationSample.SAMPLE2)
                 .build();
         kafkaMessageService.sendSplittedSampleData(splittedSampleData);
 

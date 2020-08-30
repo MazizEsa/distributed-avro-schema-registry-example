@@ -6,7 +6,7 @@
         {
             "name": "FlatSampleData",
             "type": {
-                "avro.java.string": "string",
+                "avro.java.string": "String",
                 "type": "string"
             },
             "default": ""
@@ -14,15 +14,15 @@
         {
             "name": "flatEnumSample",
             "type": {
-                "namespace": "org.maz.schema",
+                "type": "enum",
                 "name": "FlatEnumerationSample",
                 "symbols": [
-                    "SAMPLE_1",
-                    "SAMPLE_2",
-                    "SAMPLE_3"
-                ],
-                "type": "enum"
-            }
+                    "SAMPLE1",
+                    "SAMPLE2",
+                    "SAMPLE3"
+                ]
+            },
+            "default": "SAMPLE1"
         }
     ]
 }

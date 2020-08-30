@@ -42,7 +42,8 @@
                                 <import>src/main/resources/schema/org.maz.schema.SplittedEnumerationSample.avsc</import>
                             </imports>
                             <sourceDirectory>${project.basedir}/src/main/resources/schema</sourceDirectory>
-                            <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
+                            <stringType>String</stringType>
                         </configuration>
                     </execution>
                 </executions>
