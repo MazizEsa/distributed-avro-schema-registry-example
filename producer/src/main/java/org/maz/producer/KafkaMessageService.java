@@ -3,7 +3,7 @@ package org.maz.producer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.maz.schema.FlatSampleData;
-import org.maz.schema.SplittedSampleData;
+import org.maz.schema.SplitSampleData;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +21,8 @@ public class KafkaMessageService {
                 error -> log.error("Erroneous"));
     }
 
-    public void sendSplittedSampleData(final SplittedSampleData splittedSampleData) {
-        kafkaTemplate.send(SPLITTED_SCHEMA_TOPIC, splittedSampleData).addCallback(
+    public void sendSplittedSampleData(final SplitSampleData splitSampleData) {
+        kafkaTemplate.send(SPLITTED_SCHEMA_TOPIC, splitSampleData).addCallback(
                 successful -> log.debug("Sent successful"),
                         error -> log.error("Erroneous"));
     }

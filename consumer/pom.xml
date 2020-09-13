@@ -39,7 +39,7 @@
                         </goals>
                         <configuration>
                             <imports>
-                                <import>src/main/resources/schema/org.maz.schema.SplittedEnumerationSample.avsc</import>
+                                <import>src/main/resources/schema/org.maz.schema.SplitEnumerationSample.avsc</import>
                             </imports>
                             <sourceDirectory>${project.basedir}/src/main/resources/schema</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
@@ -69,8 +69,8 @@
                     <subjects/>
                     <subjectPatterns>
                         <pattern>.*FlatSampleData</pattern>
-                        <pattern>.*SplittedSampleData</pattern>
-                        <pattern>.*SplittedEnumerationSample</pattern>
+                        <pattern>.*SplitSampleData</pattern>
+                        <pattern>.*SplitEnumerationSample</pattern>
                     </subjectPatterns>
                     <references/>
                 </configuration>

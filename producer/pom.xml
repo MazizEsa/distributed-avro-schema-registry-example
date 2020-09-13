@@ -24,7 +24,7 @@
                         </goals>
                         <configuration>
                             <imports>
-                                <import>src/main/resources/schema/org.maz.schema.SplittedEnumerationSample.avsc</import>
+                                <import>src/main/resources/schema/org.maz.schema.SplitEnumerationSample.avsc</import>
                             </imports>
                             <sourceDirectory>${project.basedir}/src/main/resources/schema</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
@@ -53,16 +53,16 @@
                     </schemaRegistryUrls>
                     <subjects>
                         <org.maz.schema.FlatSampleData>src/main/resources/schema/org.maz.schema.FlatSampleData.avsc</org.maz.schema.FlatSampleData>
-                        <org.maz.schema.SplittedEnumerationSample>src/main/resources/schema/org.maz.schema.SplittedEnumerationSample.avsc</org.maz.schema.SplittedEnumerationSample>
-                        <org.maz.schema.SplittedSampleData>src/main/resources/schema/org.maz.schema.SplittedSampleData.avsc</org.maz.schema.SplittedSampleData>
+                        <org.maz.schema.SplitEnumerationSample>src/main/resources/schema/org.maz.schema.SplitEnumerationSample.avsc</org.maz.schema.SplitEnumerationSample>
+                        <org.maz.schema.SplitSampleData>src/main/resources/schema/org.maz.schema.SplitSampleData.avsc</org.maz.schema.SplitSampleData>
                     </subjects>
                     <references>
-                        <org.maz.schema.SplittedSampleData>
+                        <org.maz.schema.SplitSampleData>
                             <reference>
-                                <name>splittedEnumerationSample</name>
-                                <subject>org.maz.schema.SplittedEnumerationSample</subject>
+                                <name>splitEnumerationSample</name>
+                                <subject>org.maz.schema.SplitEnumerationSample</subject>
                             </reference>
-                        </org.maz.schema.SplittedSampleData>
+                        </org.maz.schema.SplitSampleData>
                     </references>
                 </configuration>
                 <goals>

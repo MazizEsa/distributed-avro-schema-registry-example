@@ -3,8 +3,8 @@ package org.maz.producer;
 import lombok.RequiredArgsConstructor;
 import org.maz.schema.FlatEnumerationSample;
 import org.maz.schema.FlatSampleData;
-import org.maz.schema.SplittedEnumerationSample;
-import org.maz.schema.SplittedSampleData;
+import org.maz.schema.SplitEnumerationSample;
+import org.maz.schema.SplitSampleData;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,9 +30,9 @@ public class ProducerController {
 
     @PostMapping("/trigger-splitted")
     public ResponseEntity<String> triggerSendSplittedMessage() {
-        final SplittedSampleData splittedSampleData = SplittedSampleData.newBuilder()
-                .setSplittedSampleData("This is a splitted data, schema reference")
-                .setSplittedEnumerationSample(SplittedEnumerationSample.SAMPLE2)
+        final SplitSampleData splittedSampleData = SplitSampleData.newBuilder()
+                .setSplitSampleData("This is a splitted data, schema reference")
+                .setSplitEnumerationSample(SplitEnumerationSample.SAMPLE2)
                 .build();
         kafkaMessageService.sendSplittedSampleData(splittedSampleData);
 
