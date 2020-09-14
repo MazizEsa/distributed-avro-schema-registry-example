@@ -3,16 +3,14 @@ spring:
     bootstrap-servers: localhost:9092
     properties:
       schema.registry.url: http://localhost:8081
-      use.latest.version: true # this is needed for schema reference to work
-      auto.register.schemas: false # this is needed for schema reference to work
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
       properties:
-        use.latest.version: true # this is needed for schema reference to work
-        auto.register.schemas: false # this is needed for schema reference to work
         value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy # so that the name of the subject will be derived from record name ie, org.maziz.something
         specific.avro.reader: true
+        use.latest.version: true # this is needed for schema reference to work
+        auto.register.schemas: false # this is needed for schema reference to work
 logging:
   level:
     root: debug
