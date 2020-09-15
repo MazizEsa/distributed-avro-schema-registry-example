@@ -16,8 +16,8 @@ public class SampleConsumerListener {
         log.info("Flat Data Received. The data is: {}", consumerRecord.value().getFlatEnumSample());
     }
 
-    @KafkaListener(topics = {"splitted-schema-topic"}, groupId = "splitted")
-    public void receiveSplittedMessage(final SplitSampleData splittedSampleData) {
-        log.info("Splitted Data Received. The data is: {}", splittedSampleData);
+    @KafkaListener(topics = {"split-schema-topic"}, groupId = "split")
+    public void receiveSplitMessage(final SplitSampleData splitSampleData) {
+        log.info("Split Data Received. The data is: {}", splitSampleData);
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class KafkaMessageService {
-    public static final String SPLITTED_SCHEMA_TOPIC = "splitted-schema-topic";
+    public static final String SPLIT_SCHEMA_TOPIC = "split-schema-topic";
     public static final String FLAT_SCHEMA_TOPIC = "flat-schema-topic";
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
@@ -21,8 +21,8 @@ public class KafkaMessageService {
                 error -> log.error("Erroneous"));
     }
 
-    public void sendSplittedSampleData(final SplitSampleData splitSampleData) {
-        kafkaTemplate.send(SPLITTED_SCHEMA_TOPIC, splitSampleData).addCallback(
+    public void sendSplitSampleData(final SplitSampleData splitSampleData) {
+        kafkaTemplate.send(SPLIT_SCHEMA_TOPIC, splitSampleData).addCallback(
                 successful -> log.debug("Sent successful"),
                         error -> log.error("Erroneous"));
     }

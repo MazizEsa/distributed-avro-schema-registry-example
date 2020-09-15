@@ -16,4 +16,6 @@ To trigger the message you can use the following:
 
 ## Trigger Split Schema Message
 
-``curl --location --request POST 'localhost:8080/trigger-splitted'``
+``curl --location --request POST 'localhost:8080/trigger-split'``
+
+Then you can observe the consumer log to see the messages sent by the producer via kafka.

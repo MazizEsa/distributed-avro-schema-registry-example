@@ -28,13 +28,13 @@ public class ProducerController {
         return ResponseEntity.ok("Ok");
     }
 
-    @PostMapping("/trigger-splitted")
-    public ResponseEntity<String> triggerSendSplittedMessage() {
-        final SplitSampleData splittedSampleData = SplitSampleData.newBuilder()
-                .setSplitSampleData("This is a splitted data, schema reference")
+    @PostMapping("/trigger-split")
+    public ResponseEntity<String> triggerSendSplitMessage() {
+        final SplitSampleData splitSampleData = SplitSampleData.newBuilder()
+                .setSplitSampleData("This is a split data, schema reference")
                 .setSplitEnumerationSample(SplitEnumerationSample.SAMPLE2)
                 .build();
-        kafkaMessageService.sendSplittedSampleData(splittedSampleData);
+        kafkaMessageService.sendSplitSampleData(splitSampleData);
 
         return ResponseEntity.ok("Ok");
     }
