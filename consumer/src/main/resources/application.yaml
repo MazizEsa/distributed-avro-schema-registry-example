@@ -13,4 +13,4 @@ spring:
         auto.register.schemas: false # this is needed for schema reference to workso that the name of the subject will be derived from record name ie, org.maziz.something
         specific.avro.reader: true
 server:
-  port: 8079
+  port: 8080
